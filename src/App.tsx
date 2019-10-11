@@ -8,8 +8,8 @@ function App() {
   const [topStories, setTopStories] = useState([]);
 
   useEffect(() => {
-    HackerNewsAPI.fetchTopStories().then((topStoriesItopStoriesIdList) => {
-      Promise.all(topStoriesItopStoriesIdList.slice(0,10).map((id: number) => {
+    HackerNewsAPI.fetchTopStories().then((topStoriesIdList) => {
+      Promise.all(topStoriesIdList.slice(0,10).map((id: number) => {
         return HackerNewsAPI.fetchTopStoryDetails(id);
       })).then((topStoriesWithDetails) => {
         //@ts-ignore //In a hurry to go home
