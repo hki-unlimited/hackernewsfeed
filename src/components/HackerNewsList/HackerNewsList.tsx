@@ -3,7 +3,7 @@ import "./HackerNewsList.scss";
 import { observer } from "mobx-react-lite";
 
 interface IRulesProps {
-    newsItems: any[];
+    newsItems: any[]; //In a hurry to go home
 }
 
 function HackerNewsList(props: IRulesProps) {
