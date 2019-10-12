@@ -1,9 +1,10 @@
 import React from "react";
 import "./HackerNewsList.scss";
+import HackerNewsItem from "../../models/HackerNewsItem";
 import { observer } from "mobx-react-lite";
 
 interface IRulesProps {
-    newsItems: any[]; //In a hurry to go home
+    newsItems: HackerNewsItem[];
 }
 
 function HackerNewsList(props: IRulesProps) {
@@ -12,9 +13,9 @@ function HackerNewsList(props: IRulesProps) {
     return(
         <div className="news-list-container">
             <ul>
-            {newsItems.map((entry: any, index: number) => { 
+            {newsItems.map((entry: HackerNewsItem, index: number) => {
                 return (
-                 <li key={index}><a href={entry.url} target="_blank">{entry.title}</a></li>   
+                 <li key={index}><a href={entry.url} target="_blank">{entry.title}</a></li>
                 );
             })}
             </ul>
