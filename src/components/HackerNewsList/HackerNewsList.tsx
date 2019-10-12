@@ -2,11 +2,11 @@ import React from "react";
 import './HackerNewsList.scss';
 import HackerNewsItem from '../../models/HackerNewsItem';
 
-interface IRulesProps {
+interface IHackerNewsProps {
     newsItems: HackerNewsItem[];
 }
 
-function HackerNewsList(props: IRulesProps) {
+function HackerNewsList(props: IHackerNewsProps) {
     const { newsItems } = props;
     if (!newsItems.length) return null;
     return(
