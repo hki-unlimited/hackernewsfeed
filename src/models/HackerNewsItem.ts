@@ -1,7 +1,7 @@
 export default interface HackerNewsItem {
+  id: number;
   by: string;
   descendants: number;
-  id: number;
   kids: number[];
   score: number;
   time: number;
