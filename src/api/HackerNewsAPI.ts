@@ -1,7 +1,7 @@
 import HackerNewsItem from '../models/HackerNewsItem';
 
 class BasePriceAPI {
-    fetchTopStories = async () => {
+    fetchTopStories = async (): Promise<number[]> => {
         const response = await fetch("https://hacker-news.firebaseio.com/v0/topstories.json");
         return response.json();
     }
