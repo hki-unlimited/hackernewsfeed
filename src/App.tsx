@@ -6,14 +6,13 @@ import HackerNewsAPI from './api/HackerNewsAPI';
 import HackerNewsItem from './models/HackerNewsItem';
 
 function App() {
-  const [topStories, setTopStories] = useState([]);
+  const [topStories, setTopStories] = useState<HackerNewsItem[]>([]);
 
   useEffect(() => {
     HackerNewsAPI.fetchTopStories().then((topStoriesIdList: number[]) => {
       Promise.all(topStoriesIdList.slice(0,10).map((id: number) => {
         return HackerNewsAPI.fetchTopStoryDetails(id);
       })).then((topStoriesWithDetails: HackerNewsItem[]) => {
-        //@ts-ignore //In a hurry to go home
         setTopStories(topStoriesWithDetails);
       });
     });
