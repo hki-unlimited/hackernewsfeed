@@ -8,13 +8,13 @@ interface IRulesProps {
 
 function HackerNewsList(props: IRulesProps) {
     const { newsItems } = props;
-    if (!newsItems) return null;
+    if (!newsItems.length) return null;
     return(
         <div className="hacker-news-list-container">
             <ul className="hacker-news-list">
             {newsItems.map((entry: HackerNewsItem, index: number) => {
                 return (
-                 <li key={index}><a href={entry.url} target="_blank">{entry.title}</a></li>
+                    <li key={index}><a href={entry.url} target="_blank">{entry.title}</a></li>
                 );
             })}
             </ul>
