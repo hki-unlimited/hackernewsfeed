@@ -10,11 +10,11 @@ function App() {
   useEffect(() => {
     //fetch top stories
     HackerNewsAPI.fetchTopStories().then((topStoriesIdList: number[]) => {
-      //get the first ten stories, then get the details for each of story.
+      //get the first ten stories, then get the details for each story.
       Promise.all(topStoriesIdList.slice(0,10).map((id: number) => {
         return HackerNewsAPI.fetchTopStoryDetails(id); //fetch the details: title, url etc
       })).then((topStoriesWithDetails: HackerNewsItem[]) => {
-        setTopStories(topStoriesWithDetails); //set state variale which will be passed to child component
+        setTopStories(topStoriesWithDetails); //set a state variable which will be passed to the child component
       });
     });
   }, []);

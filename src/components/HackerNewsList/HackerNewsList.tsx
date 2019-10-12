@@ -1,7 +1,6 @@
 import React from "react";
 import './HackerNewsList.scss';
 import HackerNewsItem from '../../models/HackerNewsItem';
-import { observer } from 'mobx-react-lite';
 
 interface IRulesProps {
     newsItems: HackerNewsItem[];
@@ -23,4 +22,4 @@ function HackerNewsList(props: IRulesProps) {
     );
 }
 
-export default observer(HackerNewsList);
+export default HackerNewsList;
