@@ -15,7 +15,7 @@
     "@types/react-select": "^2.0.19",
     "@types/react-toggle": "^4.0.2",
     "ajv": "^6.10.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "bootstrap-switch-button": "^1.0.0",
     "bootstrap-switch-button-react": "^1.0.0",
